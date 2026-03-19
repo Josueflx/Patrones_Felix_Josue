@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompuBuilder Store - Composite</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CompuBuilder</div>
+
+    <div class="search">
+      <input type="text" placeholder="Buscar procesadores, GPU, RAM, SSD..." />
+      <button>Buscar</button>
+    </div>
+
+    <div class="nav-actions">
+      <span>Cuenta</span>
+      <span>Favoritos</span>
+      <span>Carrito</span>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <span class="badge">PC Gamer</span>
+        <span class="badge">Workstation</span>
+        <span class="badge">Oficina</span>
+        <span class="badge">Upgrades</span>
+      </div>
+      <h1>Arma tu computadora ideal</h1>
+      <p>
+        Compra piezas individuales o agrega una build completa.
+        Con Composite, una build funciona como un objeto compuesto de muchos productos,
+        y el total se calcula automáticamente.
+      </p>
+      <button class="btn" onclick="agregarComboDestacado()">Agregar combo gamer destacado</button>
+    </div>
+  </section>
+
+  <main class="layout">
+    <section>
+      <div class="section">
+        <div class="section-header">
+          <div>
+            <h2>Componentes populares</h2>
+            <p>Productos hoja del patrón Composite</p>
+          </div>
+        </div>
+        <div id="productosGrid" class="products-grid"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-header">
+          <div>
+            <h2>Builds listas para comprar</h2>
+            <p>Objetos compuestos que contienen varios productos</p>
+          </div>
+        </div>
+        <div id="buildsGrid" class="builds-grid"></div>
+      </div>
+
+      <div class="composite-box">
+        <h2>Vista jerárquica del carrito</h2>
+        <p class="cart-sub">
+          Aquí se ve la orientación del patrón Composite en una tienda real.
+        </p>
+        <div id="treeView" class="tree"></div>
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h3>Carrito de compras</h3>
+      <p class="cart-sub">Puedes agregar productos individuales o combos completos.</p>
+
+      <div id="cartItems" class="cart-items">
+        <div class="empty">Tu carrito está vacío.</div>
+      </div>
+
+      <div class="cart-total-box">
+        <div class="cart-total-line">
+          <span>Subtotal</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+        <div class="cart-total-line">
+          <span>Envío</span>
+          <span id="envio">$250.00</span>
+        </div>
+        <div class="cart-total-final">
+          <span>Total</span>
+          <span id="totalFinal">$250.00</span>
+        </div>
+
+        <button class="btn">Proceder al pago</button>
+        <button class="danger-btn" onclick="vaciarCarrito()">Vaciar carrito</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
